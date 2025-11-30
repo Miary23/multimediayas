@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FRC • Mise à jour des compétences</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <div class="container">
+    <header class="header">
+      <h1>Définition des compétences</h1>
+      <p class="subtitle">Fondamentaux de la Relation Client</p>
+    </header>
+<div class="competences-grid">
+      <!-- FRC4 -->
+      <div class="competence-card">
+        <h3><span class="badge">FRC4</span> Écoute Active</h3>
+        <ul>
+          <li>Prendre en compte l'ensemble des demandes client</li>
+          <li>Reformuler précisément les besoins exprimés</li>
+          <li>Analyser les situations d'impayés et facturation complexe</li>
+        </ul>
+      </div>
+
+      <!-- FRC7 -->
+      <div class="competence-card">
+        <h3><span class="badge">FRC7</span> Agilité Informatique</h3>
+        <ul>
+          <li>Maîtrise avancée de la bureautique</li>
+          <li>Adaptation rapide aux nouveaux outils (CRM, etc.)</li>
+          <li>Utilisation fluide de plusieurs outils en simultané</li>
+        </ul>
+      </div>
+
+      <!-- FRC13 -->
+      <div class="competence-card">
+        <h3><span class="badge">FRC13</span> Connaissance Produits & Services</h3>
+        <ul>
+          <li>Conseil expert et maîtrise juridique des contrats</li>
+          <li>Veille active sur le positionnement marché</li>
+          <li>Connaissance approfondie des bénéfices clients</li>
+        </ul>
+      </div>
+    </div>
+
+    <section class="form-section">
+      <h2>Mise à jour des niveaux de compétence</h2>
+
+      <div class="field">
+        <label for="personne">Collaborateur</label>
+        <select id="personne" required>
+          <option value="">Chargement des collaborateurs...</option>
+        </select>
+      </div>
+
+      <div class="info-card" id="info" style="display:none;">
+        <p><strong id="nom"></strong></p>
+        <p class="role" id="fonction"></p>
+        <p class="anciennete">
+          Ancienneté : <span id="ancienneteValeur"></span>
+        </p>
+      </div>
+
+      <div class="frc-grid">
+        <div class="frc-item">
+          <label>FRC4 - Écoute Active</label>
+          <select id="frc1">
+            <option value="">-- Choisir le niveau --</option>
+            <option value="Hors niveau">Niveau 1 - Hors niveau</option>
+            <option value="Junior">Niveau 2 - Junior</option>
+            <option value="Confirmé">Niveau 3 - Confirmé</option>
+            <option value="Senior">Niveau 4 - Senior</option>
+          </select>
+        </div>
+
+        <div class="frc-item">
+          <label>FRC7 - Agilité Informatique</label>
+          <select id="frc4">
+            <option value="">-- Choisir le niveau --</option>
+            <option value="Hors niveau">Niveau 1 - Hors niveau</option>
+            <option value="Junior">Niveau 2 - Junior</option>
+            <option value="Confirmé">Niveau 3 - Confirmé</option>
+            <option value="Senior">Niveau 4 - Senior</option>
+          </select>
+        </div>
+
+        <div class="frc-item">
+          <label>FRC13 - Connaissance Produit et Service</label>
+          <select id="frc7">
+            <option value="">-- Choisir le niveau --</option>
+            <option value="Hors niveau">Niveau 1 - Hors niveau</option>
+            <option value="Junior">Niveau 2 - Junior</option>
+            <option value="Confirmé">Niveau 3 - Confirmé</option>
+            <option value="Senior">Niveau 4 - Senior</option>
+          </select>
+        </div>
+      </div>
+
+
+      <button id="submitBtn" class="btn-primary">
+        Enregistrer les 3 niveaux
+      </button>
+
+      <div class="message" id="message" role="alert"></div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>

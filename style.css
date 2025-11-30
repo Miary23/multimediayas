@@ -1,0 +1,298 @@
+/* ============================================= */
+/*                1. RESET & TYPO                */
+/* ============================================= */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ============================================= */
+/*                2. LAYOUT GÉNÉRAL              */
+/* ============================================= */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* ============================================= */
+/*                3. HEADER                      */
+/* ============================================= */
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+  color: white;
+}
+
+.header h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.subtitle {
+  font-size: 1.3rem;
+  opacity: 0.9;
+}
+
+/* ============================================= */
+/*                4. CARTES COMPÉTENCES          */
+/* ============================================= */
+.competences-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 4rem;
+}
+
+.competence-card {
+  background: white;
+  padding: 1.8rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+}
+
+.competence-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.competence-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: #5a67d8;
+}
+
+.badge {
+  background: #667eea;
+  color: white;
+  padding: 0.35rem 0.8rem;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-right: 0.5rem;
+}
+
+.competence-card ul {
+  list-style: none;
+}
+
+.competence-card li {
+  position: relative;
+  padding-left: 1.8rem;
+  margin-bottom: 0.8rem;
+  font-size: 0.95rem;
+}
+
+.competence-card li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #48bb78;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* ============================================= */
+/*                5. FORMULAIRE PRINCIPAL        */
+/* ============================================= */
+.form-section {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 15px 45px rgba(0,0,0,0.2);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.form-section h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #4a5568;
+  font-size: 1.8rem;
+}
+
+/* Grille classique (2 colonnes sur grand écran) */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 640px) {
+  .form-grid { grid-template-columns: 1fr; }
+}
+
+/* ============================================= */
+/*                6. CHAMPS DE SAISIE            */
+/* ============================================= */
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+.field label {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #2d3748;
+}
+
+.field label i {
+  margin-right: 0.5rem;
+  color: #667eea;
+}
+
+select {
+  padding: 0.9rem 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  font-size: 1rem;
+  background: white;
+  transition: all 0.3s ease;
+}
+
+select:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.15);
+}
+
+/* ============================================= */
+/*                7. CARTE INFO COLLABORATEUR    */
+/* ============================================= */
+.info-card {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  padding: 1.5rem;
+  border-radius: 16px;
+  text-align: center;
+  margin: 1.5rem 0;
+  animation: fadeIn 0.5s ease;
+}
+
+.info-card .role {
+  font-size: 0.95rem;
+  opacity: 0.9;
+  margin-top: 0.3rem;
+}
+
+.anciennete {
+  margin-top: 0.8rem;
+  font-size: 1.1rem;
+}
+
+.anciennete i {
+  margin-right: 0.5rem;
+  color: #a0aec0;
+}
+
+#ancienneteValeur {
+  font-weight: 600;
+  color: white;
+}
+
+/* ============================================= */
+/*                8. GRILLE DES NIVEAUX FRC      */
+/* ============================================= */
+.frc-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.8rem;
+  margin: 2.5rem 0;
+}
+
+.frc-item {
+  background: #ffffff;
+  padding: 1.6rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.frc-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.frc-item label {
+  display: block;
+  margin-bottom: 0.8rem;
+  font-weight: 600;
+  color: #2d3748;
+  font-size: 1.05rem;
+}
+
+.frc-item label::before {
+  color: #667eea;
+  font-weight: 700;
+  margin-right: 0.4rem;
+}
+
+/* Mobile : 1 colonne */
+@media (max-width: 768px) {
+  .frc-grid { grid-template-columns: 1fr; }
+  .frc-item { padding: 1.4rem; }
+}
+
+/* ============================================= */
+/*                9. BOUTON PRINCIPAL            */
+/* ============================================= */
+.btn-primary {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(135deg, #48bb78, #38a169);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(72, 187, 120, 0.4);
+}
+
+.btn-primary i {
+  margin-right: 0.5rem;
+}
+
+/* ============================================= */
+/*                10. MESSAGES                   */
+/* ============================================= */
+.message {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 12px;
+  text-align: center;
+  font-weight: 500;
+  display: none;
+}
+
+.message.success { background:#d4edda; color:#155724; border:1px solid #c3e6cb; }
+.message.error   { background:#f8d7da; color:#721c24; border:1px solid #f5c6cb; }
+.message.loading { background:#cce5ff; color:#004085; }
+
+/* ============================================= */
+/*                11. ANIMATIONS                 */
+/* ============================================= */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
