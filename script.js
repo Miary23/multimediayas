@@ -125,3 +125,5 @@ document.getElementById("submitBtn").addEventListener("click", async () => {
     showMessage("Erreur réseau : " + err.message, "error");
   }
 });
+
+// text
