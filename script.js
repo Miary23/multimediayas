@@ -32,6 +32,8 @@ async function loadData() {
   }
 }
 
+
+
 function populateSelect() {
   const select = document.getElementById("personne");
   select.innerHTML = '<option value="">-- Choisir un collaborateur --</option>';
@@ -125,3 +127,5 @@ document.getElementById("submitBtn").addEventListener("click", async () => {
     showMessage("Erreur réseau : " + err.message, "error");
   }
 });
+
+// tets
